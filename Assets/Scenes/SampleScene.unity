@@ -322,7 +322,7 @@ MonoBehaviour:
   damage: 10
   range: 100
   fpsCam: {fileID: 1858927772}
-  muzzleShot: {fileID: 198487454556335134, guid: 020840bfc2d3f7245b9c37053e3a9366,
+  muzzleFlash: {fileID: 198091677323280960, guid: 0a85037a90c96e747a3f74661394048f,
     type: 2}
 --- !u!54 &110969183
 Rigidbody:
@@ -567,48 +567,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 636d565b856723b42a52848c00036e84,
     type: 3}
   m_PrefabInternal: {fileID: 123236918}
---- !u!1001 &128810489
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 110969181}
-    m_Modifications:
-    - target: {fileID: 4717117813915706, guid: 020840bfc2d3f7245b9c37053e3a9366, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.067
-      objectReference: {fileID: 0}
-    - target: {fileID: 4717117813915706, guid: 020840bfc2d3f7245b9c37053e3a9366, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.0453
-      objectReference: {fileID: 0}
-    - target: {fileID: 4717117813915706, guid: 020840bfc2d3f7245b9c37053e3a9366, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0.2153
-      objectReference: {fileID: 0}
-    - target: {fileID: 4717117813915706, guid: 020840bfc2d3f7245b9c37053e3a9366, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4717117813915706, guid: 020840bfc2d3f7245b9c37053e3a9366, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4717117813915706, guid: 020840bfc2d3f7245b9c37053e3a9366, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4717117813915706, guid: 020840bfc2d3f7245b9c37053e3a9366, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4717117813915706, guid: 020840bfc2d3f7245b9c37053e3a9366, type: 2}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 020840bfc2d3f7245b9c37053e3a9366, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1001 &134028557
 Prefab:
   m_ObjectHideFlags: 0
@@ -2849,6 +2807,35 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: 28c16a5e64df7174b9eb5220a691fcf5,
     type: 3}
   m_PrefabInternal: {fileID: 721809078}
+--- !u!1 &736798355
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 736798356}
+  m_Layer: 0
+  m_Name: MuzzleFlash
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &736798356
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 736798355}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1717027080}
+  m_Father: {fileID: 110969181}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &739426249
 Prefab:
   m_ObjectHideFlags: 0
@@ -4392,7 +4379,7 @@ MonoBehaviour:
   damage: 10
   range: 100
   fpsCam: {fileID: 0}
-  muzzleShot: {fileID: 0}
+  muzzleFlash: {fileID: 0}
 --- !u!1001 &1046438486
 Prefab:
   m_ObjectHideFlags: 0
@@ -6888,6 +6875,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 636d565b856723b42a52848c00036e84,
     type: 3}
   m_PrefabInternal: {fileID: 1708543804}
+--- !u!4 &1717027080 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4553251553051414, guid: 0a85037a90c96e747a3f74661394048f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1751180652}
 --- !u!1001 &1722421839
 Prefab:
   m_ObjectHideFlags: 0
@@ -7022,6 +7014,56 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: 28c16a5e64df7174b9eb5220a691fcf5,
     type: 3}
   m_PrefabInternal: {fileID: 1738390778}
+--- !u!1001 &1751180652
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 736798356}
+    m_Modifications:
+    - target: {fileID: 4553251553051414, guid: 0a85037a90c96e747a3f74661394048f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.0007441193
+      objectReference: {fileID: 0}
+    - target: {fileID: 4553251553051414, guid: 0a85037a90c96e747a3f74661394048f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.023746267
+      objectReference: {fileID: 0}
+    - target: {fileID: 4553251553051414, guid: 0a85037a90c96e747a3f74661394048f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.31922692
+      objectReference: {fileID: 0}
+    - target: {fileID: 4553251553051414, guid: 0a85037a90c96e747a3f74661394048f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4553251553051414, guid: 0a85037a90c96e747a3f74661394048f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4553251553051414, guid: 0a85037a90c96e747a3f74661394048f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4553251553051414, guid: 0a85037a90c96e747a3f74661394048f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4553251553051414, guid: 0a85037a90c96e747a3f74661394048f, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4553251553051414, guid: 0a85037a90c96e747a3f74661394048f, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 10.551647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4553251553051414, guid: 0a85037a90c96e747a3f74661394048f, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 10.551647
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a85037a90c96e747a3f74661394048f, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1001 &1769816005
 Prefab:
   m_ObjectHideFlags: 0
@@ -7377,7 +7419,7 @@ MonoBehaviour:
   damage: 10
   range: 100
   fpsCam: {fileID: 0}
-  muzzleShot: {fileID: 0}
+  muzzleFlash: {fileID: 0}
 --- !u!20 &1858927772 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0,
