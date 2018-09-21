@@ -252,27 +252,6 @@ Transform:
   m_Father: {fileID: 1104221975}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &110969180 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1005506183076160, guid: 2551c365036253e45b6497395f392777,
-    type: 2}
-  m_PrefabInternal: {fileID: 163452321}
---- !u!114 &110969181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 110969180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45b6195898f9a1b4e8ec306262c9924d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 10
-  range: 100
-  fpsCam: {fileID: 1858927772}
-  bulletPrefab: {fileID: 1116616205603672, guid: e7cd4e8f95b2e624aac4aa70a1c95dd3,
-    type: 2}
 --- !u!1001 &111115358
 Prefab:
   m_ObjectHideFlags: 0
@@ -607,9 +586,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1978677824046524, guid: 2551c365036253e45b6497395f392777, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114028819597578012, guid: 2551c365036253e45b6497395f392777, type: 2}
     - {fileID: 114143791536007646, guid: 2551c365036253e45b6497395f392777, type: 2}
+    - {fileID: 114077198765242604, guid: 2551c365036253e45b6497395f392777, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 2551c365036253e45b6497395f392777, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &168520338
@@ -2433,7 +2417,8 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1.2524
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: e4e9a56bc8304a240abd00cee44a7eb8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e4e9a56bc8304a240abd00cee44a7eb8, type: 3}
   m_IsPrefabAsset: 0
 --- !u!4 &645392240 stripped
@@ -3188,7 +3173,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 819326192}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39eaf0fe9697adb42b9ba80778e31e9a, type: 3}
+  m_Script: {fileID: 11500000, guid: d00d6fd49302a3f4b9bc78939f2c13c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
@@ -4495,6 +4480,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 636d565b856723b42a52848c00036e84,
     type: 3}
   m_PrefabInternal: {fileID: 1071107129}
+--- !u!1 &1093709020 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1689064608742192, guid: 2551c365036253e45b6497395f392777,
+    type: 2}
+  m_PrefabInternal: {fileID: 163452321}
+--- !u!114 &1093709024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1093709020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d513936caef3594b816bda4ba133338, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  range: 1000
 --- !u!1001 &1093968376
 Prefab:
   m_ObjectHideFlags: 0
@@ -6147,6 +6150,7 @@ GameObject:
   - component: {fileID: 1576586409}
   - component: {fileID: 1576586408}
   - component: {fileID: 1576586413}
+  - component: {fileID: 1576586414}
   m_Layer: 0
   m_Name: RightCap
   m_TagString: Untagged
@@ -6244,6 +6248,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39eaf0fe9697adb42b9ba80778e31e9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+--- !u!114 &1576586414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1576586407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d00d6fd49302a3f4b9bc78939f2c13c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
@@ -7187,11 +7203,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: 28c16a5e64df7174b9eb5220a691fcf5,
     type: 3}
   m_PrefabInternal: {fileID: 1825162549}
---- !u!20 &1858927772 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 20183896018525108, guid: 2551c365036253e45b6497395f392777,
-    type: 2}
-  m_PrefabInternal: {fileID: 163452321}
 --- !u!1 &1868222165
 GameObject:
   m_ObjectHideFlags: 0
